@@ -234,14 +234,17 @@ void draw_file( char * path, unsigned char * pixels ) {
 			fputc(pixels[(y * DIM + x)], f);
 			fputc(0, f);
 			fputc(0, f);
-#elif defined(PALE)
+#elif defined(PALE) && !defined(WHITE)
 			fputc(pixels[(y * DIM + x)] * 0.9, f);
 			fputc(pixels[(y * DIM + x)] * 0.3, f);
 			fputc(pixels[(y * DIM + x)] * 0.3, f);
-#elif defined(WHITE)
+#elif defined(WHITE) && !defined(PALE)
 			fputc(pixels[(y * DIM + x)] * 0.9, f);
 			fputc(pixels[(y * DIM + x)] * 0.9, f);
 			fputc(pixels[(y * DIM + x)] * 0.9, f);
+#else
+	#warning Make up your mind on the color!
+	#error You must choose either PALE, WHITE, or neither!
 #endif
 		}
 	}
