@@ -1,0 +1,6 @@
+input.ppm
+output.ppm
+julia_cpu.ppm
+julia_gpu.ppm
+blur
+julia
