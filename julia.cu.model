@@ -8,7 +8,7 @@
 #define VERBOSE
 //#define DRY_RUN
 
-#define USE_CPU /*
+/*#define USE_CPU /*
 #define PROFILE_CPU // */
 //#define USE_GPU /*
 #define PROFILE_GPU // */

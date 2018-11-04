@@ -1,0 +1,17 @@
+function blur_test {
+	echo "--------------------------------------------------------------------------------"
+	echo
+	echo
+	echo "Blur ${1}, convolution filter using ${2^} access, input image using ${3^} access"
+	echo
+	echo
+	cp "sb-${2}-${3}.cu" blur.cu
+	. xmb-make-blur
+	experiment=". xrb-repeat-blur" . xe-experiment ;}
+
+blur_test 1 constant shared
+blur_test 2 global shared
+blur_test 3 local shared
+blur_test 4 constant global
+blur_test 5 global global
+blur_test 6 local global

@@ -8,7 +8,7 @@
 #define VERBOSE
 //#define DRY_RUN
 
-#define USE_CPU /*
+/*#define USE_CPU /*
 #define PROFILE_CPU // */
 //#define USE_GPU /*
 #define PROFILE_GPU // */
@@ -17,18 +17,18 @@
 #define GPU_OUTPUT_FILE "julia_gpu.ppm"
 
 
-#define JULIA_X -0.7817635270541083
-#define JULIA_Y 0.13465681362725457
+#define JULIA_X -0.8
+#define JULIA_Y 0.156
 
-#define SCALE 1.6
-#define DIM 4000
+#define SCALE 1.5
+#define DIM 1000
 
-//#define PALE /*
+/*#define PALE /*
 #define WHITE // */
 
-#define GRID_SIZE 1024 /*
+#define GRID_SIZE DIM*DIM /*
 #define GRID_SIZE_2D DIM,DIM // */
-#define BLOCK_SIZE 129 /*
+#define BLOCK_SIZE 1 /*
 #define BLOCK_SIZE_2D 1,1 // */
 
 

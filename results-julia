@@ -1,0 +1,534 @@
+--------------------------------------------------------------------------------
+
+
+Julia 1, cpu run
+
+
+/usr/local/cuda/bin/nvcc julia.cu -o julia -I/include -I. -lineinfo -arch=sm_35 --ptxas-options=-v --use_fast_math -L/lib64 -lcudart
+julia.cu(276): warning: conversion from a string literal to "char *" is deprecated
+
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z6kernelPhi' for 'sm_35'
+ptxas info    : Function properties for _Z6kernelPhi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 23 registers, 332 bytes cmem[0], 48 bytes cmem[2]
+julia.cu(276): warning: conversion from a string literal to "char *" is deprecated
+
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+cpu drawing...
+855.067017 ms
+cpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+cpu drawing...
+855.844238 ms
+cpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+cpu drawing...
+855.433044 ms
+cpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+cpu drawing...
+857.699951 ms
+cpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+cpu drawing...
+878.371094 ms
+cpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+cpu drawing...
+853.601318 ms
+cpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+cpu drawing...
+856.615723 ms
+cpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+cpu drawing...
+855.431702 ms
+cpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+cpu drawing...
+855.237000 ms
+cpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+cpu drawing...
+860.342712 ms
+cpu drawing complete
+Fastest time: 853.601318
+Average time: 858.3643798999999
+--------------------------------------------------------------------------------
+
+
+Julia 2, 1D grid size 1, 1D block size 1
+
+
+/usr/local/cuda/bin/nvcc julia.cu -o julia -I/include -I. -lineinfo -arch=sm_35 --ptxas-options=-v --use_fast_math -L/lib64 -lcudart
+julia.cu(285): warning: conversion from a string literal to "char *" is deprecated
+
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z6kernelPhi' for 'sm_35'
+ptxas info    : Function properties for _Z6kernelPhi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 23 registers, 332 bytes cmem[0], 48 bytes cmem[2]
+julia.cu(285): warning: conversion from a string literal to "char *" is deprecated
+
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1=1, block size 1=1, thread size 1000000
+2631.742432 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1=1, block size 1=1, thread size 1000000
+2616.372803 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1=1, block size 1=1, thread size 1000000
+2559.814453 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1=1, block size 1=1, thread size 1000000
+2559.813965 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1=1, block size 1=1, thread size 1000000
+2559.813721 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1=1, block size 1=1, thread size 1000000
+2559.816162 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1=1, block size 1=1, thread size 1000000
+2559.814453 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1=1, block size 1=1, thread size 1000000
+2559.815918 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1=1, block size 1=1, thread size 1000000
+2559.817383 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1=1, block size 1=1, thread size 1000000
+2559.815430 ms
+gpu drawing complete
+Fastest time: 2559.813721
+Average time: 2572.6636719999997
+--------------------------------------------------------------------------------
+
+
+Julia 3, 1D grid size dimdim, 1D block size 1
+
+
+/usr/local/cuda/bin/nvcc julia.cu -o julia -I/include -I. -lineinfo -arch=sm_35 --ptxas-options=-v --use_fast_math -L/lib64 -lcudart
+julia.cu(285): warning: conversion from a string literal to "char *" is deprecated
+
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z6kernelPhi' for 'sm_35'
+ptxas info    : Function properties for _Z6kernelPhi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 23 registers, 332 bytes cmem[0], 48 bytes cmem[2]
+julia.cu(285): warning: conversion from a string literal to "char *" is deprecated
+
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000*1000=1000000, block size 1=1, thread size 1
+15.359616 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000*1000=1000000, block size 1=1, thread size 1
+15.361600 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000*1000=1000000, block size 1=1, thread size 1
+15.361024 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000*1000=1000000, block size 1=1, thread size 1
+15.360960 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000*1000=1000000, block size 1=1, thread size 1
+15.360704 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000*1000=1000000, block size 1=1, thread size 1
+19.659777 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000*1000=1000000, block size 1=1, thread size 1
+15.361152 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000*1000=1000000, block size 1=1, thread size 1
+15.360192 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000*1000=1000000, block size 1=1, thread size 1
+15.358144 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000*1000=1000000, block size 1=1, thread size 1
+15.356192 ms
+gpu drawing complete
+Fastest time: 15.356192
+Average time: 15.7899361
+--------------------------------------------------------------------------------
+
+
+Julia 4, 1D grid size dimdim, 1D block size 3
+
+
+/usr/local/cuda/bin/nvcc julia.cu -o julia -I/include -I. -lineinfo -arch=sm_35 --ptxas-options=-v --use_fast_math -L/lib64 -lcudart
+julia.cu(285): warning: conversion from a string literal to "char *" is deprecated
+
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z6kernelPhi' for 'sm_35'
+ptxas info    : Function properties for _Z6kernelPhi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 23 registers, 332 bytes cmem[0], 48 bytes cmem[2]
+julia.cu(285): warning: conversion from a string literal to "char *" is deprecated
+
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000*1000=1000000, block size 3=3, thread size 1
+7.510624 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000*1000=1000000, block size 3=3, thread size 1
+7.510144 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000*1000=1000000, block size 3=3, thread size 1
+7.509088 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000*1000=1000000, block size 3=3, thread size 1
+7.510528 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000*1000=1000000, block size 3=3, thread size 1
+7.511040 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000*1000=1000000, block size 3=3, thread size 1
+7.510176 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000*1000=1000000, block size 3=3, thread size 1
+7.509472 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000*1000=1000000, block size 3=3, thread size 1
+7.507904 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000*1000=1000000, block size 3=3, thread size 1
+7.509856 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000*1000=1000000, block size 3=3, thread size 1
+7.509216 ms
+gpu drawing complete
+Fastest time: 7.507904
+Average time: 7.5098048
+--------------------------------------------------------------------------------
+
+
+Julia 5, 1D grid size dimdim, 1D block size 1024
+
+
+/usr/local/cuda/bin/nvcc julia.cu -o julia -I/include -I. -lineinfo -arch=sm_35 --ptxas-options=-v --use_fast_math -L/lib64 -lcudart
+julia.cu(285): warning: conversion from a string literal to "char *" is deprecated
+
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z6kernelPhi' for 'sm_35'
+ptxas info    : Function properties for _Z6kernelPhi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 23 registers, 332 bytes cmem[0], 48 bytes cmem[2]
+julia.cu(285): warning: conversion from a string literal to "char *" is deprecated
+
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000*1000=1000000, block size 1024=1024, thread size 1
+17.245440 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000*1000=1000000, block size 1024=1024, thread size 1
+17.242720 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000*1000=1000000, block size 1024=1024, thread size 1
+17.244991 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000*1000=1000000, block size 1024=1024, thread size 1
+17.242945 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000*1000=1000000, block size 1024=1024, thread size 1
+21.670752 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000*1000=1000000, block size 1024=1024, thread size 1
+17.249311 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000*1000=1000000, block size 1024=1024, thread size 1
+17.245056 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000*1000=1000000, block size 1024=1024, thread size 1
+21.671936 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000*1000=1000000, block size 1024=1024, thread size 1
+17.245407 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000*1000=1000000, block size 1024=1024, thread size 1
+17.248735 ms
+gpu drawing complete
+Fastest time: 17.24272
+Average time: 18.1307293
+--------------------------------------------------------------------------------
+
+
+Julia 6, 2D grid size dim_dim, 2D block size 1_1
+
+
+/usr/local/cuda/bin/nvcc julia.cu -o julia -I/include -I. -lineinfo -arch=sm_35 --ptxas-options=-v --use_fast_math -L/lib64 -lcudart
+julia.cu(285): warning: conversion from a string literal to "char *" is deprecated
+
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z6kernelPhi' for 'sm_35'
+ptxas info    : Function properties for _Z6kernelPhi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 23 registers, 332 bytes cmem[0], 48 bytes cmem[2]
+julia.cu(285): warning: conversion from a string literal to "char *" is deprecated
+
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000,1000=1000000, block size 1,1=1, thread size 1
+15.331264 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000,1000=1000000, block size 1,1=1, thread size 1
+15.330272 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000,1000=1000000, block size 1,1=1, thread size 1
+15.334880 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000,1000=1000000, block size 1,1=1, thread size 1
+15.328576 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000,1000=1000000, block size 1,1=1, thread size 1
+15.385280 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000,1000=1000000, block size 1,1=1, thread size 1
+15.332128 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000,1000=1000000, block size 1,1=1, thread size 1
+15.333120 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000,1000=1000000, block size 1,1=1, thread size 1
+15.329728 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000,1000=1000000, block size 1,1=1, thread size 1
+16.915487 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000,1000=1000000, block size 1,1=1, thread size 1
+15.335296 ms
+gpu drawing complete
+Fastest time: 15.328576
+Average time: 15.495603099999997
+--------------------------------------------------------------------------------
+
+
+Julia 7, 2D grid size dim_dim, 2D block size 3_3
+
+
+/usr/local/cuda/bin/nvcc julia.cu -o julia -I/include -I. -lineinfo -arch=sm_35 --ptxas-options=-v --use_fast_math -L/lib64 -lcudart
+julia.cu(285): warning: conversion from a string literal to "char *" is deprecated
+
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z6kernelPhi' for 'sm_35'
+ptxas info    : Function properties for _Z6kernelPhi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 23 registers, 332 bytes cmem[0], 48 bytes cmem[2]
+julia.cu(285): warning: conversion from a string literal to "char *" is deprecated
+
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000,1000=1000000, block size 3,3=9, thread size 1
+4.462944 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000,1000=1000000, block size 3,3=9, thread size 1
+4.460608 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000,1000=1000000, block size 3,3=9, thread size 1
+4.475616 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000,1000=1000000, block size 3,3=9, thread size 1
+4.625568 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000,1000=1000000, block size 3,3=9, thread size 1
+4.464256 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000,1000=1000000, block size 3,3=9, thread size 1
+6.882432 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000,1000=1000000, block size 3,3=9, thread size 1
+8.607072 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000,1000=1000000, block size 3,3=9, thread size 1
+6.882752 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000,1000=1000000, block size 3,3=9, thread size 1
+4.626560 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000,1000=1000000, block size 3,3=9, thread size 1
+4.460800 ms
+gpu drawing complete
+Fastest time: 4.460608
+Average time: 5.3948608
+--------------------------------------------------------------------------------
+
+
+Julia 8, 2D grid size dim_dim, 2D block size 32_32
+
+
+/usr/local/cuda/bin/nvcc julia.cu -o julia -I/include -I. -lineinfo -arch=sm_35 --ptxas-options=-v --use_fast_math -L/lib64 -lcudart
+julia.cu(285): warning: conversion from a string literal to "char *" is deprecated
+
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z6kernelPhi' for 'sm_35'
+ptxas info    : Function properties for _Z6kernelPhi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 23 registers, 332 bytes cmem[0], 48 bytes cmem[2]
+julia.cu(285): warning: conversion from a string literal to "char *" is deprecated
+
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000,1000=1000000, block size 32,32=1024, thread size 1
+21.118528 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000,1000=1000000, block size 32,32=1024, thread size 1
+19.765087 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000,1000=1000000, block size 32,32=1024, thread size 1
+19.762304 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000,1000=1000000, block size 32,32=1024, thread size 1
+19.830721 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000,1000=1000000, block size 32,32=1024, thread size 1
+19.825727 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000,1000=1000000, block size 32,32=1024, thread size 1
+19.831039 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000,1000=1000000, block size 32,32=1024, thread size 1
+20.755968 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000,1000=1000000, block size 32,32=1024, thread size 1
+19.761600 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000,1000=1000000, block size 32,32=1024, thread size 1
+19.764032 ms
+gpu drawing complete
+julia set of -0.8,0.156 resolution 1000*1000 scale 1.5
+gpu drawing...
+problem size 1000000, grid dim 1000,1000=1000000, block size 32,32=1024, thread size 1
+19.809120 ms
+gpu drawing complete
+Fastest time: 19.7616
+Average time: 20.022412600000003

@@ -1,0 +1,28 @@
+function julia_dimension {
+	echo "$1" | sed s/_/\\n/ | wc -l ;}
+
+function julia_test {
+	echo "--------------------------------------------------------------------------------"
+	echo
+	echo
+	if [ "$#" = "3" ]; then
+		echo "Julia ${1}, $(julia_dimension "${2}")D grid size ${2}, $(julia_dimension "${3}")D block size ${3}"
+	else
+		echo "Julia ${1}, ${2} run" ;fi
+	echo
+	echo
+	if [ "$#" = "3" ]; then
+		cp "sj-${2}-${3}.cu" julia.cu
+	else
+		cp "sj-${2}.cu" julia.cu ;fi
+	. xmj-make-julia
+	experiment=". xrj-repeat-julia" . xe-experiment ;}
+
+julia_test 1 cpu
+julia_test 2 1 1
+julia_test 3 dimdim 1
+julia_test 4 dimdim 3
+julia_test 5 dimdim 1024
+julia_test 6 dim_dim 1_1
+julia_test 7 dim_dim 3_3
+julia_test 8 dim_dim 32_32

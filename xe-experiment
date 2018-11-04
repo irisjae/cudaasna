@@ -1,0 +1,1 @@
+results="$(eval "$experiment" | tee /dev/tty)"; times="$(echo "$results" | grep ms | sed s/\ ms//)"; echo "Fastest time: $(echo "$times" | jq -s min)"; echo "Average time: $(echo "$times" | jq -s add/length)"

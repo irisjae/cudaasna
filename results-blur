@@ -1,0 +1,324 @@
+--------------------------------------------------------------------------------
+
+
+Blur 1, convolution filter using Constant access, input image using Shared access
+
+
+/usr/local/cuda/bin/nvcc blur.cu -o blur -I/include -I. -lineinfo -arch=sm_35 --ptxas-options=-v --use_fast_math -L/lib64 -lcudart
+ptxas info    : 0 bytes gmem, 36 bytes cmem[3]
+ptxas info    : Compiling entry function '_Z11blur_kernelP8PPMImageS0_' for 'sm_35'
+ptxas info    : Function properties for _Z11blur_kernelP8PPMImageS0_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 32 registers, 49152 bytes smem, 336 bytes cmem[0]
+blurring...
+problem size 900*900=810000, shared memory 128*128, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.862752 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 128*128, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.871424 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 128*128, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.974208 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 128*128, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.899648 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 128*128, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.849632 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 128*128, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.877024 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 128*128, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.828224 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 128*128, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.866720 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 128*128, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.831808 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 128*128, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.877728 ms
+blurring complete
+Fastest time: 0.828224
+Average time: 0.8739167999999999
+--------------------------------------------------------------------------------
+
+
+Blur 2, convolution filter using Global access, input image using Shared access
+
+
+/usr/local/cuda/bin/nvcc blur.cu -o blur -I/include -I. -lineinfo -arch=sm_35 --ptxas-options=-v --use_fast_math -L/lib64 -lcudart
+ptxas info    : 36 bytes gmem
+ptxas info    : Compiling entry function '_Z11blur_kernelP8PPMImageS0_' for 'sm_35'
+ptxas info    : Function properties for _Z11blur_kernelP8PPMImageS0_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 37 registers, 49152 bytes smem, 336 bytes cmem[0]
+blurring...
+problem size 900*900=810000, shared memory 128*128, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.916704 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 128*128, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+1.334816 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 128*128, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+1.216768 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 128*128, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.972512 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 128*128, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.944000 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 128*128, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+1.156992 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 128*128, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.936320 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 128*128, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.933984 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 128*128, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.860576 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 128*128, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.934240 ms
+blurring complete
+Fastest time: 0.860576
+Average time: 1.0206912
+--------------------------------------------------------------------------------
+
+
+Blur 3, convolution filter using Local access, input image using Shared access
+
+
+/usr/local/cuda/bin/nvcc blur.cu -o blur -I/include -I. -lineinfo -arch=sm_35 --ptxas-options=-v --use_fast_math -L/lib64 -lcudart
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z11blur_kernelP8PPMImageS0_' for 'sm_35'
+ptxas info    : Function properties for _Z11blur_kernelP8PPMImageS0_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 32 registers, 49152 bytes smem, 336 bytes cmem[0], 12 bytes cmem[2]
+blurring...
+problem size 900*900=810000, shared memory 128*128, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.895328 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 128*128, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.830560 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 128*128, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.799904 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 128*128, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.946368 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 128*128, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+1.173248 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 128*128, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+1.057376 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 128*128, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.913952 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 128*128, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+1.015168 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 128*128, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.784288 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 128*128, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.880864 ms
+blurring complete
+Fastest time: 0.784288
+Average time: 0.9297055999999999
+--------------------------------------------------------------------------------
+
+
+Blur 4, convolution filter using Constant access, input image using Global access
+
+
+/usr/local/cuda/bin/nvcc blur.cu -o blur -I/include -I. -lineinfo -arch=sm_35 --ptxas-options=-v --use_fast_math -L/lib64 -lcudart
+ptxas info    : 0 bytes gmem, 36 bytes cmem[3]
+ptxas info    : Compiling entry function '_Z11blur_kernelP8PPMImageS0_' for 'sm_35'
+ptxas info    : Function properties for _Z11blur_kernelP8PPMImageS0_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 30 registers, 336 bytes cmem[0]
+blurring...
+problem size 900*900=810000, shared memory 0, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.798304 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 0, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.776608 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 0, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.800864 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 0, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.786432 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 0, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.796480 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 0, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.801024 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 0, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.943648 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 0, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.791168 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 0, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+1.104096 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 0, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.791616 ms
+blurring complete
+Fastest time: 0.776608
+Average time: 0.839024
+--------------------------------------------------------------------------------
+
+
+Blur 5, convolution filter using Global access, input image using Global access
+
+
+/usr/local/cuda/bin/nvcc blur.cu -o blur -I/include -I. -lineinfo -arch=sm_35 --ptxas-options=-v --use_fast_math -L/lib64 -lcudart
+ptxas info    : 36 bytes gmem
+ptxas info    : Compiling entry function '_Z11blur_kernelP8PPMImageS0_' for 'sm_35'
+ptxas info    : Function properties for _Z11blur_kernelP8PPMImageS0_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 31 registers, 336 bytes cmem[0]
+blurring...
+problem size 900*900=810000, shared memory 0, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.788416 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 0, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.792448 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 0, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+1.077376 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 0, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.994720 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 0, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.788416 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 0, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.785696 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 0, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.981856 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 0, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.794368 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 0, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.781376 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 0, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+1.108160 ms
+blurring complete
+Fastest time: 0.781376
+Average time: 0.8892831999999998
+--------------------------------------------------------------------------------
+
+
+Blur 6, convolution filter using Local access, input image using Global access
+
+
+/usr/local/cuda/bin/nvcc blur.cu -o blur -I/include -I. -lineinfo -arch=sm_35 --ptxas-options=-v --use_fast_math -L/lib64 -lcudart
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z11blur_kernelP8PPMImageS0_' for 'sm_35'
+ptxas info    : Function properties for _Z11blur_kernelP8PPMImageS0_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 30 registers, 336 bytes cmem[0], 12 bytes cmem[2]
+blurring...
+problem size 900*900=810000, shared memory 0, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.768320 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 0, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.778112 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 0, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.773248 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 0, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.778208 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 0, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.975840 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 0, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.793120 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 0, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.986016 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 0, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.778848 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 0, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.788928 ms
+blurring complete
+blurring...
+problem size 900*900=810000, shared memory 0, filter size 3*3=9, grid dim 32,32=1024, block size 32,32=1024 - 29,29 - 961->841, thread size 1->1
+0.761472 ms
+blurring complete
+Fastest time: 0.761472
+Average time: 0.8182112
